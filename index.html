@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>selamat hbd iyh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS & JS dipakai bareng di semua halaman -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="blur-in-start">
+
+  <!-- floating hearts/stars, dijalankan oleh js/script.js -->
+  <div id="floating-bg"></div>
+
+  <!-- titik navigasi kecil di atas: halaman 1 dari 3 -->
+  <nav class="page-nav">
+    <a href="index.html" class="active"></a>
+    <a href="gallery.html"></a>
+    <a href="letter.html"></a>
+  </nav>
+
+  <!-- ================================================================
+       HALAMAN 1 — HERO / INTRO
+
+       Catatan: tombol musik & elemen <audio> TIDAK ditaruh manual
+       di sini lagi — sekarang dibuat otomatis lewat js/script.js
+       (biar musiknya bisa terus lanjut walau pindah ke gallery.html
+       atau letter.html). Kalau mau ganti lagu, edit langsung file
+       assets/music.mp3, bukan di HTML ini.
+  ================================================================= -->
+  <section id="hero" class="page">
+    <div class="hero-content">
+
+      <!-- ⬇⬇⬇ GANTI GIF DI SINI (Hero / Welcome GIF) ⬇⬇⬇
+           Sekarang masih pakai DUMMY: assets/hero.gif
+           Nanti tinggal timpa file assets/hero.gif dengan GIF
+           kamu sendiri (nama file HARUS SAMA: hero.gif), atau
+           kalau mau nama file beda, ganti juga src di bawah ini. -->
+      <div class="gif-frame">
+        <img src="assets/hero.gif" alt="cute welcome gif">
+      </div>
+      <!-- ⬆⬆⬆ AKHIR HERO GIF ⬆⬆⬆ -->
+
+      <h1 class="hero-title">happy birthday my princess<span> wiji lestari!!</span> 💖</h1>
+      <p class="hero-subtitle">i love you soooooo muchhhh!!! &lt;3</p>
+
+      <!-- tombol ini pindah ke HALAMAN gallery.html -->
+      <a href="gallery.html" class="nav-btn">open it &lt;3</a>
+      <div class="scroll-hint">↓</div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

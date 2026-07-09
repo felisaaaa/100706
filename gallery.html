@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pretty girl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="blur-in-start">
+
+  <div id="floating-bg"></div>
+
+  <!-- titik navigasi kecil di atas: halaman 2 dari 3 -->
+  <nav class="page-nav">
+    <a href="index.html"></a>
+    <a href="gallery.html" class="active"></a>
+    <a href="letter.html"></a>
+  </nav>
+
+  <!-- ================================================================
+       HALAMAN 2 — INTERACTIVE PHOTO SLIDESHOW
+       Satu foto ditampilkan dalam satu waktu, dia bisa klik
+       panah kiri/kanan (atau swipe di HP, atau titik dot) buat
+       lihat foto berikutnya. Captionnya ganti otomatis mengikuti
+       foto yang sedang tampil.
+  ================================================================= -->
+  <section id="gallery" class="page">
+    <h2 class="gallery-heading">my mine gweh yang cantik sedunia, sarang!<span class="heart">🩷</span></h2>
+    <p class="gallery-sub">tap the arrows (or swipe!) to see more</p>
+
+    <div class="slideshow-wrap">
+
+      <!-- ⬇ GIF dekorasi kecil di pojok — masih DUMMY: assets/sparkle1.gif
+           Timpa file itu nanti dengan GIF kecil favoritmu. -->
+      <div class="corner-deco">
+        <img src="assets/sparkle1.gif" alt="sparkle decoration">
+      </div>
+
+      <div class="slide-stage">
+        <button class="arrow-btn" id="prevBtn" aria-label="previous photo">‹</button>
+
+        <div class="photo-stage" id="photoStage">
+          <!-- foto ditata seperti polaroid dengan sedikit kemiringan -->
+          <div class="polaroid" id="polaroid">
+            <div class="photo-frame">
+              <!-- ⬇ FOTO-FOTO ASLI DIATUR LEWAT js/gallery.js
+                   (di array `photos` bagian atas file itu), bukan di
+                   sini. Ganti path/caption di sana ya — <img> ini
+                   cuma "layar" yang diisi otomatis oleh JavaScript. -->
+              <img id="currentPhoto" src="photos/photo1.jpg" alt="memory one">
+            </div>
+          </div>
+
+          <!-- ⬇ GIF dekorasi kecil di sisi kiri-bawah polaroid —
+               masih DUMMY: assets/sparkle2.gif. Timpa file itu
+               nanti dengan GIF kecil favoritmu. -->
+          <div class="bottom-left-deco">
+            <img src="assets/sparkle2.gif" alt="sparkle decoration">
+          </div>
+        </div>
+
+        <button class="arrow-btn" id="nextBtn" aria-label="next photo">›</button>
+      </div>
+
+      <!-- caption ganti otomatis mengikuti foto yang tampil -->
+      <p class="caption" id="currentCaption">Thank you for being a part of my life... every day with you feels like a gift.</p>
+
+      <!-- titik-titik indikator, bisa diklik langsung ke foto tertentu -->
+      <div class="dots" id="dots">
+        <button class="dot active" data-index="0" aria-label="photo 1"></button>
+        <button class="dot" data-index="1" aria-label="photo 2"></button>
+        <button class="dot" data-index="2" aria-label="photo 3"></button>
+        <button class="dot" data-index="3" aria-label="photo 4"></button>
+      </div>
+
+      <p class="counter" id="counter">photo 1 of 4</p>
+    </div>
+
+    <!-- tombol pindah halaman: balik ke hero, atau lanjut ke surat -->
+    <div class="page-buttons">
+      <a href="index.html" class="nav-btn secondary">&lt; back</a>
+      <a href="letter.html" class="nav-btn">keep going &lt;3</a>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
